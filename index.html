@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 
@@ -35,38 +31,37 @@
         <script type="text/javascript" src="/static/cookielaw/js/cookielaw.js?v=1.0.2"></script>
         
         
-        
-<style>
-    .cookies-accept-btn {
-        background-color: blueviolet;
-        color: white;
-        border: 2px solid transparent;
-    }
-    .cookies-accept-btn:hover {
-        border: 2px solid blueviolet;
-        color: blueviolet;
-    }
-</style>
-<div id="CookielawBanner">
-    <div class="container">
-        <div id="cookie-banner-header" class="mb-3" style="display:flex;justify-content:space-between;">
-            <div class="h5 mb-0" style="align-self: center;">Cookies information 🍪</div>
-            <div>
-                <a class="btn cookies-accept-btn pull-right my-1" href="javascript:Cookielaw.accept();">Accept all</a>
-                
-                <a class="btn btn-secondary pull-right reject my-1" href="/cookies?show=settings" target="_blank">Visit cookie settings</a>
+        <style>
+            .cookies-accept-btn {
+                background-color: blueviolet;
+                color: white;
+                border: 2px solid transparent;
+            }
+            .cookies-accept-btn:hover {
+                border: 2px solid blueviolet;
+                color: blueviolet;
+            }
+        </style>
+        <!-- <div id="CookielawBanner">
+            <div class="container">
+                <div id="cookie-banner-header" class="mb-3" style="display:flex;justify-content:space-between;">
+                    <div class="h5 mb-0" style="align-self: center;">Cookies information 🍪</div>
+                    <div>
+                        <a class="btn cookies-accept-btn pull-right my-1" href="javascript:Cookielaw.accept();">Accept all</a>
+                        
+                        <a class="btn btn-secondary pull-right reject my-1" href="/cookies?show=settings" target="_blank">Visit cookie settings</a>
+                    </div>
+                </div>
+                <div>
+                    <p style="max-height: 15vh; overflow-y: scroll;">
+                        Our platform stores small pieces of information on your device in the form of text strings (cookies). 
+                        This is done with the purpose of providing the best possible service for you and other users. Some of 
+                        the cookies with non-essential purposes can be rejected if you choose to do so. If you would like more 
+                        information about this, you can access our <a href="/cookies">cookies policy</a>.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div>
-            <p style="max-height: 15vh; overflow-y: scroll;">
-                Our platform stores small pieces of information on your device in the form of text strings (cookies). 
-                This is done with the purpose of providing the best possible service for you and other users. Some of 
-                the cookies with non-essential purposes can be rejected if you choose to do so. If you would like more 
-                information about this, you can access our <a href="/cookies">cookies policy</a>.
-            </p>
-        </div>
-    </div>
-</div>
+        </div> -->
         
         
         
@@ -81,13 +76,11 @@
             mixpanel.track('Sign up');
         </script>
 
-        
         <script id="citewayblock" type="application/json">{"userId":"MOtBzaXez"}</script>
         <script async type="text/javascript" src="https://citeway.com/static/js/banners-head-content.js"></script>
 
         
-<meta name="description" content="Helping people understand failure data to improve their systems without the knowledge barrier.">
-
+        <meta name="description" content="Helping people understand failure data to improve their systems without the knowledge barrier.">
 
     </head>
 
@@ -232,15 +225,13 @@
                   </button>
                   <div class="collapse navbar-collapse flex-row-reverse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        
                         <li class="nav-item frontpage-navbar-link">
                             <a class="nav-link" aria-current="page" href="/">Frontpage</a>
                         </li>
-                        
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/home">Dashboard</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                        </li> -->
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Resources
                             </a>
@@ -249,26 +240,21 @@
                                 <li><a class="dropdown-item" href="/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/frequently-asked-questions">FAQs</a></li>
                             </ul>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/frequently-asked-questions">FAQs</a>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="/pricing">Pricing</a>
                         </li>
-                        
-                        
-                        <li class="nav-item sign-in-btn">
+                        <!-- <li class="nav-item sign-in-btn">
                             <a class="nav-link" href="/users/login/" style="padding: 4px 8px; margin: auto;">Sign in</a>
-                        </li>
-                        
-                        
+                        </li> -->
                     </ul>
                   </div>
                 </div>
               </nav>    
         </header>
-        
-        <div id="alert-messages" class="mt-3" style="position:absolute; width:100%; z-index:1030; top:0;">
-  
 </div>
 
         
@@ -1316,7 +1302,7 @@
 
 
 <!-- Modal for freebie -->
-<div class="modal fade" id="freebie-modal" tabindex="-1" aria-labelledby="freebie-modal" aria-hidden="true">
+<!-- <div class="modal fade" id="freebie-modal" tabindex="-1" aria-labelledby="freebie-modal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal">
         <div class="modal-content" style="border: none; border-radius: 1rem;">
             <div class="modal-header" style="border: none;">
@@ -1345,12 +1331,12 @@
           </div>
         </div>
     </div>
-  </div>
+  </div> -->
 
 
         
         <!-- Modal for company linking info -->
-        <div class="modal fade" id="linkCompanyModal" tabindex="-1" aria-labelledby="linkCompanyModalLabel" aria-hidden="true">
+        <!-- <div class="modal fade" id="linkCompanyModal" tabindex="-1" aria-labelledby="linkCompanyModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header" style="border-bottom: 0;">
@@ -1382,7 +1368,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
 
         <footer class="renuud-footer">
@@ -1420,11 +1406,6 @@
         
         
         <script crossorigin="anonymous" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        
-        
-        
-        
-        
         
         <script>mixpanel.people.set({ "Registered": "No" });</script>
         
@@ -1613,25 +1594,8 @@
             return ret;
         }
         fixHeightHeadlines();
-        /* function showYscale(){
-            if(window.innerWidth <= 576){
-                resultschart.options.scales.y.display = false;
-            } else {
-                resultschart.options.scales.y.display = true;
-            }
-            resultschart.update();
-        } */
-        /* function adjustHeightGraph(){
-            var r = document.querySelector(':root');
-            r.style.setProperty('--chartHeight', resultschart.height + 'px');
-        } */
-        //adjustHeightGraph();
-        //showYscale();
         $(window).on('resize', function(){
-            //showYscale();
-            //resultschart.resize();
             fixHeightHeadlines();
-            //adjustHeightGraph();
         });
     });
 </script>
