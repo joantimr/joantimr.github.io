@@ -1,0 +1,817 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Broadstat - Reliability analysis made simple</title>
+        <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+        
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/css/simpleLTA.css?v=1.0.0">
+        <link rel="stylesheet" href="/static/css/component-custom-switch.css?v=1.0.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="p:domain_verify" content="cbaa5bf6672b6e06ed6c18d31e3efe0f"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <script type="text/javascript" src="/static/cookielaw/js/cookielaw.js?v=1.0.2"></script>
+        
+        
+        
+        
+                   
+            
+        
+        
+        <script type="text/javascript">
+            (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+            for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+            MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+            
+            // Enabling the debug mode flag is useful during implementation,
+            // but it's recommended you remove it for production
+            mixpanel.init('22531cf15294a0b509c7783302085ed1', {debug: true, ignore_dnt: true}); 
+            mixpanel.track('Sign up');
+        </script>
+
+        
+        <script id="citewayblock" type="application/json">{"userId":"MOtBzaXez"}</script>
+        <script async type="text/javascript" src="https://citeway.com/static/js/banners-head-content.js"></script>
+
+        
+<meta name="description" content="Check our subscription plans and find the one that better covers your needs.">
+
+
+    </head>
+
+    <body>
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+                font-size: 17px;
+                background-color: rgb(255,255,255);
+            }
+            p {
+                font-family: "Inter", "Roboto", sans-serif;
+            }
+            
+            .navbar-style {
+                /*background-color: transparent;*/
+                background-color:rgba(20, 2, 181, 0.64);
+            }
+            .navbar-title {
+                font-weight: bold;
+                font-size: xx-large;
+                margin-left: 20px;
+                font-family: 'Abril Fatface';
+                color: white;
+            }
+            .search-wrapper {
+                display: flex;
+                background: white;
+                border-radius: 25px;
+                padding-left: 15px;
+                height: 41.5px;
+                margin: auto 0.5rem;
+                margin-bottom: 5px;
+            }
+            .search-input:focus {
+                box-shadow: none;
+            }
+            .navbar-renuud:focus {
+                outline-width: 0px!important;
+                box-shadow: inherit;
+            }
+            @media(max-width:768px){
+                .navbar-brand.navbar-title{
+                    margin-left: 5px;
+                }
+            }
+            .navbar{
+                background: linear-gradient(90deg, rgba(138,43,226,1) 0%, rgba(122,135,255,1) 100%);
+            }
+            .navbar-nav .nav-item .nav-link, .navbar-brand{
+                color:white;
+            }
+            .navbar-nav li {
+                margin: 0 10px;
+            }
+            .nav-pills .nav-link.active{
+                background-color: rgb(178, 152, 232);
+                border-radius: 10px;
+            }
+            @font-face {
+                font-family: 'BrandFont-GothicNeoEB';
+                src:
+                    url('/static/AppleSDGothicNeoEB.otf') 
+                    format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            .navbar-brand {
+                font-size: 1.7rem;
+                font-family: "BrandFont-GothicNeoEB", "AppleSDGothicNeo-ExtraBold", "Apple SD Gothic Neo", Raleway Dots, cursive;
+            }
+            .navbar-brand:hover {
+                color: rgb(255,255,255,0.7);
+            }
+            .main-wrapper .nav-link.active{
+                background-color: mediumpurple;
+            }
+            .main-wrapper .nav-item{
+                width: fit-content;
+            }
+            .user-avatar{
+                background-color: lightgray;
+                width: 32px;height: 32px;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+                line-height: 32px;
+            }
+            .navbar.bd-navbar {
+                
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            }
+            @media(max-width:768px){
+                .sidebar-sticky{
+                    position: inherit!important;
+                }
+            }
+            .material-symbols-outlined {
+                font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+            }
+            @media all and (min-width: 992px) {
+                .navbar .nav-item .dropdown-menu{ display: none; }
+                .navbar .nav-item:hover .nav-link{   }
+                .navbar .nav-item:hover .dropdown-menu{ display: block; }
+                .navbar .nav-item .dropdown-menu{ margin-top:0px;right:-10px; }
+            }
+            .dropdown-menu {
+                border: none;
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15),inset 0 -1px 0 rgba(255,255,255,0.15);
+            }
+            .sign-in-btn {
+                border-radius: 15px;
+                padding: 0 5px;
+                display: flex;
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+            .sign-in-btn:hover {
+                background-color: rgba(255, 255, 255, 0.45);
+            }
+            .bi-layout-sidebar {
+                font-size: 1.2rem;
+            }
+            .bi-layout-sidebar::before {
+                vertical-align: middle;
+            }
+        </style>
+        <!-- Navigation -->
+        <header class="navbar navbar-expand-lg bd-navbar sticky-top p-1">
+            <nav class="navbar container-fluid navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid px-4 mb-0 mb-lg-0">
+                  <a class="navbar-brand p-0" href="/home" style="cursor:pointer;">
+                    <img src="/static/logo-broadstat-white.svg" alt="broadstat" height="28">
+                  </a>
+                  <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" 
+                  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fa-solid fa-bars" style="color: white;"></i>
+                  </button>
+                  <div class="collapse navbar-collapse flex-row-reverse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        
+                        <li class="nav-item frontpage-navbar-link">
+                            <a class="nav-link" aria-current="page" href="/">Frontpage</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/home">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Resources
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/knowledge">Knowledge</a></li>
+                                <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                                <li><a class="dropdown-item" href="/frequently-asked-questions">FAQs</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing">Pricing</a>
+                        </li>
+                        
+                        
+                        <li class="nav-item sign-in-btn">
+                            <a class="nav-link" href="/users/login/" style="padding: 4px 8px; margin: auto;">Sign in</a>
+                        </li>
+                        
+                        
+                    </ul>
+                  </div>
+                </div>
+              </nav>    
+        </header>
+        
+        <div id="alert-messages" class="mt-3" style="position:absolute; width:100%; z-index:1030; top:0;">
+  
+</div>
+
+        
+<script src="https://js.stripe.com/v3/"></script>
+
+        
+        
+
+<style>
+  .pricing-header {
+    max-width: 700px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  .card-deck .card {
+    min-width: 220px;
+    padding: 0;
+    //margin-bottom: 2rem;
+  }
+
+  .card-deck .card-header {
+    padding: 20px;
+  }
+
+  @media (max-width:576px) {
+    .card-deck {
+      flex-flow: row wrap;
+      margin-right: -$card-deck-margin;
+      margin-left: -$card-deck-margin;
+    }
+
+    .card-deck .card {
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: $card-deck-margin;
+      margin-bottom: 0; // Override the default
+      margin-left: $card-deck-margin;
+    }
+  }
+
+  @media (min-width:576px) {
+    .card-deck .card {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+      flex: 1 0 0%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-bottom: 0;
+      margin-left: 15px;
+    }
+  }
+
+  .border-top {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  }
+
+  .pricing-btn {
+    background-color: blueviolet;
+    color: white;
+    min-width: 150px;
+  }
+
+  .pricing-btn:hover {
+    background-color: blueviolet;
+    transform: scale(1.1);
+    color: white;
+  }
+
+  .select-plan-btn {
+    padding: 8px 16px;
+    background-color: blueviolet;
+    color: white;
+  }
+
+  .cancel-selection-btn {
+    padding: 8px 16px;
+  }
+
+  .hidden-plan {
+    display: none;
+  }
+
+  .current-plan {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  .special-highlight {
+    position: relative;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .special-highlight::before {
+    /* Highlight color */
+    background-color: rgb(252, 230, 112);
+
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 80%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+
+  .trial-promo-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 60px;
+    /*line-height: 60px; 1.8rem*/
+    /* background-color: rgb(252, 230, 112); */
+    background-color: rgb(33, 37, 41);
+    color: white;
+    z-index: 9;
+  }
+
+  .trial-promo-footer>.container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .trial-promo-footer.closed {
+    transform: translateY(var(--promoBannerHeight));
+  }
+
+  .open-close-banner {
+    padding: 2px 10px;
+    position: absolute;
+    top: -20px;
+    /* background-color: rgb(252, 230, 112); */
+    background-color: rgb(33, 37, 41);
+    color: white;
+    border-radius: 5px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .trial-promo-footer.closed .open-close-banner {
+    transform: rotate(180deg);
+  }
+
+  #promo-banner-initial-text[aria-expanded="true"] {
+    display: none;
+  }
+
+  :root {
+    --promoBannerHeight: 60px;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4" style="font-weight:500;">Pricing</h1>
+  <p class="lead">Select your preferred plan according to your needs. Link your card details for a hassle-free
+    experience,
+    and cancel your subscription at any time.</p>
+  <p class="lead">
+    Choose any plan and enjoy the <span class="special-highlight">first 2 weeks for free</span> , without commitment.
+  </p>
+</div>
+<div class="container-lg">
+  <div class="card-deck mb-3 mx-md-auto mx-1 text-center row">
+    <div class="card mb-4 box-shadow col-12 col-md-4 mx-2">
+      <div class="card-header ">
+        
+        <h2 class="my-0 font-weight-normal">Basic</h2>
+      </div>
+      <div class="card-body py-5">
+        <h1 class="card-title pricing-card-title">59€ <small class="text-muted">/ mo*</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Unlimited reliability projects</li>
+          <li>Cloud storage</li>
+          <li>1 user included</li>
+          <li>Each extra user: +15€/mo</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block pricing-btn choose-plan-btn basic-plan" aria-current="page"
+          data-bs-toggle="modal" data-bs-target="#planmodal">
+          
+          Choose Basic
+          
+        </button>
+      </div>
+    </div>
+    <div class="card mb-4 box-shadow col-12 col-md-4 mx-2">
+      <div class="card-header ">
+        
+        <h2 class="my-0 font-weight-normal">Pro</h2>
+      </div>
+      <div class="card-body py-5">
+        <h1 class="card-title pricing-card-title">99€ <small class="text-muted">/ mo*</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Unlimited reliability projects</li>
+          <li>Cloud storage</li>
+          <li>5 users included</li>
+          <li>Each extra user: +15€/mo</li>
+          <li>Priority email support</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block pricing-btn choose-plan-btn pro-plan" aria-current="page"
+          data-bs-toggle="modal" data-bs-target="#planmodal">
+          
+          Choose Pro
+          
+        </button>
+      </div>
+    </div>
+    <div class="card text-bg-dark mb-4 box-shadow col-12 col-md-4 mx-2">
+      <div class="card-header ">
+        <h2 class="my-0 font-weight-normal" style="font-size: 1.8rem;">Tailored implementation program</h2>
+      </div>
+      <div class="card-body py-5">
+        <!-- <h3 class="card-title pricing-card-title">Request a quote</h3> -->
+        <div class="card-text h4">Flexible options based on specific needs</div>
+        <ul class="list mt-3 mb-4" style="list-style-position: inside; padding-left: 0;">
+          <li class="mb-2">Assessment of reliability growth opportunities specific for your organization</li>
+          <li class="mb-2">Individualized implementation roadmap and follow up</li>
+          <li class="mb-2">Expert support calls</li>
+          <li class="mb-2">Applied learning exercises</li>
+          <li class="mb-2">Access to software</li>
+        </ul>
+        <!-- <button type="button" class="btn btn-lg btn-block pr" aria-current="page"
+        style="background-color: gold; color: black;">
+          Request a quote
+        </button> -->
+        <div id="program-form-block" class="w-100 text-center hidden" style="border: white 1px solid;border-radius: 20px;padding: 15px;">
+          <p class="landing-section-text">Send us your email address and we'll get in contact with you soon.</p>
+          <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
+              <input type="text" class="form-control" placeholder="email@yourcompany.com" aria-label="Recipient's email" 
+              aria-describedby="send-email-button" style="background-color: transparent;color: white;border-color: white;">
+              <button class="btn btn-outline-light px-3" type="button" id="send-email-button">Send</button>
+          </div>
+        </div>
+        <button id="interested-program-btn" class="btn btn-lg btn-block m-1 px-3" style="font-size: 1.25rem;background-color: gold;
+        color: black;">Request a quote</button>
+      </div>
+    </div>
+  </div>
+  <div class="mb-5">* Base prices of each plan, without including the addition of extra users. Prices do not include
+    taxes.</div>
+  <button type="button" class="btn btn-lg btn-block upgrade-to-max d-none">Upgrade to MAX</button>
+</div>
+
+
+<!-- <div id="promo-banner" class="trial-promo-footer py-2 d-flex align-items-center opened">
+  <div class="open-close-banner"><i class="fa-solid fa-angle-down"></i></div>
+  <a style="text-decoration: none; cursor: pointer; color: white;" class="w-100" data-bs-toggle="collapse" href="#personalized-program-block" 
+  role="button" aria-expanded="false" aria-controls="personalized-program-block" id="promo-banner-initial-text">
+      <div class="container text-center">
+          <span class="">Unsure if your company is in the right stage to use Broadstat? We can help you!</span>&nbsp;
+          <span class="btn btn-dark px-2 py-1" style="border: white solid 1px; border-radius: 3rem;">More details</span>
+      </div>
+  </a>
+  <div id="personalized-program-block" class="w-100 container collapse my-2" style="max-width: 900px;">
+      <div class="h3 my-2 text-center w-100">Personalized implementation program</div>
+      <div class="mt-2">
+          <p class="landing-section-text">Do you want to obtain an assessment on how to implement reliability analysis specifically into your company's processes? Get a personalized, 
+              detailed strategy, and receive our support during its application, every step of the way. Our personalized implementation program includes:</p>
+          <ul class="landing-section-text">
+              <li>Assessment of reliability growth opportunities within your organization</li>
+              <li>Individualized implementation roadmap</li>
+              <li>Expert support calls</li>
+              <li>Access to Broadstat software</li>
+              <li>Applied learning exercises</li>
+          </ul>
+          <div class="w-100 text-center">
+              <div id="program-form-block" class="w-100 text-center hidden">
+                  <p class="landing-section-text">Send us your email address and we'll get in contact with you soon.</p>
+                  <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
+                      <input type="text" class="form-control" placeholder="email@yourcompany.com" aria-label="Recipient's email" 
+                      aria-describedby="send-email-button" style="background-color: transparent;color: white;border-color: white;">
+                      <button class="btn btn-outline-light px-3" type="button" id="send-email-button">Send</button>
+                  </div>
+              </div>
+              <button id="interested-program-btn" class="btn btn-dark px-3 text-center" style="border: white solid 1px; border-radius: 3rem;">I'm interested</button>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+<div class="">
+  <div class="modal fade" id="planmodal" tabindex="-1" aria-labelledby="planmodal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content" style="border: none; border-radius: 1rem;">
+        <div class="modal-header" style="border: none;">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body items-modal px-4 pb-4 pt-0">
+          <strong id="login-req-title-modal" class="mb-2 h3">Login required</strong>
+          <div id="plan-body-modal">
+            <div class="my-2">To select a plan, you first need to log into an account.</div>
+            <div class="my-4 d-inline-flex justify-content-center w-100">
+              <a href="/users/register?next=pricing" type="button" class="btn py-2 px-4 mx-2"
+                style="border: 2px solid blueviolet;background-color: blueviolet;color: white;">
+                Register
+              </a>
+              <a href="/users/login?next=pricing" type="button" class="btn py-2 px-4 mx-2"
+                style="border: 2px solid blueviolet;color: blueviolet;">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+        <!-- Modal for company linking info -->
+        <div class="modal fade" id="linkCompanyModal" tabindex="-1" aria-labelledby="linkCompanyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: 0;">
+                        <h5 class="modal-title">Link to your company's account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <p>
+                            To start new projects or participate in existing ones, your account must be associated with a paid
+                            account that is linked to your company.
+                        </p>
+                        <p class="mt-4"><b>If no one at your company has a paid account</b></p>
+                        <p>
+                            You can <a href="/pricing">select a subscription plan</a> and become the
+                            administrator of the Broadstat account associated with your organization. This will enable you to
+                            invite your colleagues to work with you, manage the subscription, and more.
+                        </p>
+                        <p class="mt-4"><b>If someone at your company already has a paid account</b></p>
+                        <p>
+                            They can invite you to join the Broadstat account associated with your organization. All they need
+                            to do is ensure that the chosen subscription plan has room for an additional user and send you an
+                            invitation from their 'My Account' section.
+                        </p>
+                    </div>
+                    <div class="modal-footer" style="border-top: 0;">
+                        <div class="d-flex">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer class="renuud-footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <p class="menu">
+                            <a href="/home/">Home</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/privacy">Privacy</a>
+                            <a href="/cookies">Cookies</a>
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright">
+                        Copyright © 2024 | All rights reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+
+        
+        
+        
+        
+        <script crossorigin="anonymous" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        
+        
+        
+        
+        
+        <script>mixpanel.people.set({ "Registered": "No" });</script>
+        
+<script>
+  // Get Stripe publishable key
+  fetch("/subscriptions/config/")
+    .then((result) => { return result.json(); })
+    .then((data) => {
+      // Initialize Stripe.js
+      const stripe = Stripe(data.publicKey);
+
+      // Fill modal function
+      $('.choose-plan-btn').on('click', (e) => {
+        planButton = e.target;
+        if ($(planButton).hasClass('basic-plan')) {
+          var title = $('#plan-title-modal')[0];
+          title.innerText = 'Basic plan';
+          $('#basic-plan-wrapper').removeClass('hidden-plan');
+          $('#pro-plan-wrapper').addClass('hidden-plan');
+          var userAmount = $('#basic-plan-select')[0].value;
+          var totalCost = (userAmount - 1) * 15 + 59;
+          $('#cost-value')[0].innerText = totalCost;
+          $('.select-plan-btn').addClass('basic-plan');
+          $('.select-plan-btn').removeClass('pro-plan');
+        } else if ($(planButton).hasClass('pro-plan')) {
+          var title = $('#plan-title-modal')[0];
+          title.innerText = 'Pro plan';
+          $('#basic-plan-wrapper').addClass('hidden-plan');
+          $('#pro-plan-wrapper').removeClass('hidden-plan');
+          var userAmount = $('#pro-plan-select')[0].value;
+          var totalCost = (userAmount - 5) * 15 + 99;
+          $('#cost-value')[0].innerText = totalCost;
+          $('.select-plan-btn').removeClass('basic-plan');
+          $('.select-plan-btn').addClass('pro-plan');
+        }
+      });
+      $('#basic-plan-select').on('change', (e) => {
+        var userAmount = e.target.value;
+        var totalCost = (userAmount - 1) * 15 + 59;
+        $('#cost-value')[0].innerText = totalCost;
+      });
+      $('#pro-plan-select').on('change', (e) => {
+        var userAmount = e.target.value;
+        var totalCost = (userAmount - 5) * 15 + 99;
+        $('#cost-value')[0].innerText = totalCost;
+      });
+
+      // Event handler
+      $('.select-plan-btn').on('click', (e) => { //fix this
+        planButton = e.target;
+        planButton.innerHTML = '<div class="spinner-border text-secondary spinner-border-sm" role="status">\
+              <span class="visually-hidden">Loading...</span></div>';
+        if ($(planButton).hasClass('basic-plan')) {
+          // Get number of users
+          var uNum = $('#basic-plan-select')[0].value;
+
+          // Get Checkout Session ID
+          if ($(planButton).hasClass('update')) {
+            fetch("subscriptions/update-subscription?plan=basic&users=" + uNum)
+              .then((result) => { return result.json(); })
+              .then((data) => {
+                console.log('the new price is ' + data.newprice);
+                window.location.replace("/home");
+              })
+          } else {
+            fetch("subscriptions/checkout-session?plan=basic&users=" + uNum)
+              .then((result) => { return result.json(); })
+              .then((data) => {
+                console.log(data);
+                // Redirect to Stripe Checkout
+                return stripe.redirectToCheckout({ sessionId: data.sessionId })
+              })
+              .then((res) => {
+                console.log(res);
+              });
+          }
+        } else if ($(planButton).hasClass('pro-plan')) {
+          // Get number of users
+          var uNum = $('#pro-plan-select')[0].value;
+
+          // Get Checkout Session ID
+          if ($(planButton).hasClass('update')) {
+            fetch("subscriptions/update-subscription?plan=pro&users=" + uNum)
+              .then((result) => { return result.json(); })
+              .then((data) => {
+                console.log('the new price is ' + data.newprice);
+                window.location.replace("/home");
+              })
+          } else {
+            fetch("subscriptions/checkout-session?plan=pro&users=" + uNum)
+              .then((result) => { return result.json(); })
+              .then((data) => {
+                console.log(data);
+                // Redirect to Stripe Checkout
+                return stripe.redirectToCheckout({ sessionId: data.sessionId })
+              })
+              .then((res) => {
+                console.log(res);
+              });
+          }
+        }
+      });
+      $('.upgrade-to-max').on('click', () => {
+        fetch("subscriptions/update-subscription")
+          .then((result) => { return result.json(); })
+          .then((data) => {
+            console.log('the new price is ' + data.newprice);
+          })
+      });
+    });
+  function jQueryRunning(method) {
+    if (window.jQuery) {
+      method();
+    } else {
+      setTimeout(function () { jQueryRunning(method) }, 50);
+    }
+  }
+  jQueryRunning(function () {
+    $('.open-close-banner').on('click', function () {
+      var banner = $('#promo-banner')[0];
+      var r = document.querySelector(':root');
+      r.style.setProperty('--promoBannerHeight', banner.offsetHeight + 'px');
+      if ($(banner).hasClass('opened')) {
+        $(banner).addClass('closed').removeClass('opened');
+      } else {
+        $(banner).addClass('opened').removeClass('closed');
+      }
+    });
+    $('#promo-banner-initial-text').on('click', () => {
+      mixpanel.track(
+        "Implementation program banner"
+      )
+    });
+    $('#interested-program-btn').on('click', (event) => {
+      mixpanel.track(
+        "Interested in program"
+      )
+      $(event.target).addClass('hidden');
+      $('#program-form-block').removeClass('hidden');
+    });
+    $('#send-email-button').on('click', (event) => {
+      var email = $('#program-form-block input')[0].value;
+      var sendBtn = event.target;
+      sendBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true">';
+      var dataString = { csrfmiddlewaretoken: 'cq6OvlkyZQQldE7NKbnoitUo5cavIo0JtriWqyouBUJxJqDlVjVkP5DLmHQchQlM', 'email-address': email, 'lead-id': 2 };
+      if (email.length > 0) {
+        $.ajax({
+          type: "POST",
+          url: "/users/register-mail",
+          data: dataString,
+          success: function (response_data, status) {
+            if (status == "success") {
+              sendBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+              //setTimeout(function(){$('#freebie-modal').modal('hide')}, 1500);
+            } else {
+              alert('Something went wrong with your request. Please, refresh the page and try again.')
+            }
+            mixpanel.track(
+              "Email for program", { 'email-address': email }
+            );
+          }
+        })
+      }
+    });
+  });
+</script>
+
+    </body>
+</html>
