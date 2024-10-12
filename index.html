@@ -1,1 +1,1640 @@
-Hello World
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Broadstat - Reliability analysis made simple</title>
+        <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+        
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet">
+
+        <link rel="stylesheet" href="/static/css/simpleLTA.css?v=1.0.0">
+        <link rel="stylesheet" href="/static/css/component-custom-switch.css?v=1.0.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="p:domain_verify" content="cbaa5bf6672b6e06ed6c18d31e3efe0f"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <script type="text/javascript" src="/static/cookielaw/js/cookielaw.js?v=1.0.2"></script>
+        
+        
+        
+<style>
+    .cookies-accept-btn {
+        background-color: blueviolet;
+        color: white;
+        border: 2px solid transparent;
+    }
+    .cookies-accept-btn:hover {
+        border: 2px solid blueviolet;
+        color: blueviolet;
+    }
+</style>
+<div id="CookielawBanner">
+    <div class="container">
+        <div id="cookie-banner-header" class="mb-3" style="display:flex;justify-content:space-between;">
+            <div class="h5 mb-0" style="align-self: center;">Cookies information 🍪</div>
+            <div>
+                <a class="btn cookies-accept-btn pull-right my-1" href="javascript:Cookielaw.accept();">Accept all</a>
+                
+                <a class="btn btn-secondary pull-right reject my-1" href="/cookies?show=settings" target="_blank">Visit cookie settings</a>
+            </div>
+        </div>
+        <div>
+            <p style="max-height: 15vh; overflow-y: scroll;">
+                Our platform stores small pieces of information on your device in the form of text strings (cookies). 
+                This is done with the purpose of providing the best possible service for you and other users. Some of 
+                the cookies with non-essential purposes can be rejected if you choose to do so. If you would like more 
+                information about this, you can access our <a href="/cookies">cookies policy</a>.
+            </p>
+        </div>
+    </div>
+</div>
+        
+        
+        
+        <script type="text/javascript">
+            (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+            for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+            MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+            
+            // Enabling the debug mode flag is useful during implementation,
+            // but it's recommended you remove it for production
+            mixpanel.init('22531cf15294a0b509c7783302085ed1', {debug: true, ignore_dnt: true}); 
+            mixpanel.track('Sign up');
+        </script>
+
+        
+        <script id="citewayblock" type="application/json">{"userId":"MOtBzaXez"}</script>
+        <script async type="text/javascript" src="https://citeway.com/static/js/banners-head-content.js"></script>
+
+        
+<meta name="description" content="Helping people understand failure data to improve their systems without the knowledge barrier.">
+
+
+    </head>
+
+    <body>
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+                font-size: 17px;
+                background-color: rgb(255,255,255);
+            }
+            p {
+                font-family: "Inter", "Roboto", sans-serif;
+            }
+            
+            .navbar-style {
+                /*background-color: transparent;*/
+                background-color:rgba(20, 2, 181, 0.64);
+            }
+            .navbar-title {
+                font-weight: bold;
+                font-size: xx-large;
+                margin-left: 20px;
+                font-family: 'Abril Fatface';
+                color: white;
+            }
+            .search-wrapper {
+                display: flex;
+                background: white;
+                border-radius: 25px;
+                padding-left: 15px;
+                height: 41.5px;
+                margin: auto 0.5rem;
+                margin-bottom: 5px;
+            }
+            .search-input:focus {
+                box-shadow: none;
+            }
+            .navbar-renuud:focus {
+                outline-width: 0px!important;
+                box-shadow: inherit;
+            }
+            @media(max-width:768px){
+                .navbar-brand.navbar-title{
+                    margin-left: 5px;
+                }
+            }
+            .navbar{
+                background: linear-gradient(90deg, rgba(138,43,226,1) 0%, rgba(122,135,255,1) 100%);
+            }
+            .navbar-nav .nav-item .nav-link, .navbar-brand{
+                color:white;
+            }
+            .navbar-nav li {
+                margin: 0 10px;
+            }
+            .nav-pills .nav-link.active{
+                background-color: rgb(178, 152, 232);
+                border-radius: 10px;
+            }
+            @font-face {
+                font-family: 'BrandFont-GothicNeoEB';
+                src:
+                    url('/static/AppleSDGothicNeoEB.otf') 
+                    format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            .navbar-brand {
+                font-size: 1.7rem;
+                font-family: "BrandFont-GothicNeoEB", "AppleSDGothicNeo-ExtraBold", "Apple SD Gothic Neo", Raleway Dots, cursive;
+            }
+            .navbar-brand:hover {
+                color: rgb(255,255,255,0.7);
+            }
+            .main-wrapper .nav-link.active{
+                background-color: mediumpurple;
+            }
+            .main-wrapper .nav-item{
+                width: fit-content;
+            }
+            .user-avatar{
+                background-color: lightgray;
+                width: 32px;height: 32px;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+                line-height: 32px;
+            }
+            .navbar.bd-navbar {
+                
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            }
+            @media(max-width:768px){
+                .sidebar-sticky{
+                    position: inherit!important;
+                }
+            }
+            .material-symbols-outlined {
+                font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 48
+            }
+            @media all and (min-width: 992px) {
+                .navbar .nav-item .dropdown-menu{ display: none; }
+                .navbar .nav-item:hover .nav-link{   }
+                .navbar .nav-item:hover .dropdown-menu{ display: block; }
+                .navbar .nav-item .dropdown-menu{ margin-top:0px;right:-10px; }
+            }
+            .dropdown-menu {
+                border: none;
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15),inset 0 -1px 0 rgba(255,255,255,0.15);
+            }
+            .sign-in-btn {
+                border-radius: 15px;
+                padding: 0 5px;
+                display: flex;
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+            .sign-in-btn:hover {
+                background-color: rgba(255, 255, 255, 0.45);
+            }
+            .bi-layout-sidebar {
+                font-size: 1.2rem;
+            }
+            .bi-layout-sidebar::before {
+                vertical-align: middle;
+            }
+        </style>
+        <!-- Navigation -->
+        <header class="navbar navbar-expand-lg bd-navbar sticky-top p-1">
+            <nav class="navbar container-fluid navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid px-4 mb-0 mb-lg-0">
+                  <a class="navbar-brand p-0" href="/home" style="cursor:pointer;">
+                    <img src="/static/logo-broadstat-white.svg" alt="broadstat" height="28">
+                  </a>
+                  <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" 
+                  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" style="border-color: white;">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fa-solid fa-bars" style="color: white;"></i>
+                  </button>
+                  <div class="collapse navbar-collapse flex-row-reverse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        
+                        <li class="nav-item frontpage-navbar-link">
+                            <a class="nav-link" aria-current="page" href="/">Frontpage</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/home">Dashboard</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Resources
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/knowledge">Knowledge</a></li>
+                                <li><a class="dropdown-item" href="/blog">Blog</a></li>
+                                <li><a class="dropdown-item" href="/frequently-asked-questions">FAQs</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pricing">Pricing</a>
+                        </li>
+                        
+                        
+                        <li class="nav-item sign-in-btn">
+                            <a class="nav-link" href="/users/login/" style="padding: 4px 8px; margin: auto;">Sign in</a>
+                        </li>
+                        
+                        
+                    </ul>
+                  </div>
+                </div>
+              </nav>    
+        </header>
+        
+        <div id="alert-messages" class="mt-3" style="position:absolute; width:100%; z-index:1030; top:0;">
+  
+</div>
+
+        
+        
+        
+        
+
+<style>   
+    .head_text {
+        color: white;
+    }
+    .main-headline {
+        text-align: left;
+        font-size: 5rem;
+    }
+    .sub-headline {
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    #landing-body {
+        padding-top: 50px;
+        background-size: 100% 100%;
+        background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+        background-image: linear-gradient(0deg, #FFFFFFFF 0%, #FFFFFFFF 19%, #FFFFFF00 100%),radial-gradient(42% 53% at 15% 94%, 
+        #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, 
+        #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),linear-gradient(125deg, #4EB5FFFF 1%, #4C00FCFF 100%);
+    }
+    .alert {
+        font-family: "Inter", "Roboto", sans-serif;
+    }
+    .landing-section-text {
+        font-size: 1.1rem;
+    }
+    .section-block-title {
+        margin-bottom: 0;
+        font-size: 1.85rem;
+    }
+    .cta-btn {
+        background-color: blueviolet;
+        border: 2px solid transparent;
+        color: white;
+        border-radius: 3rem;
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+    .cta-btn:hover, .cta-sec-btn:hover {
+        background-color: transparent;
+        color: blueviolet;
+        border: blueviolet 2px solid;
+    }
+    .cta-sec-btn {
+        background-color: white;
+        color: blueviolet;
+        border: 1px solid blueviolet;
+        border-radius: 3rem;
+    }
+    .graph-selector label {
+        border-radius: 100%!important;
+        height: 30px!important;
+        width: 30px!important;
+        line-height: 30px;
+        padding: 0;
+    }
+    .curve-selector .rounded-pill {
+        margin: 0.1rem!important;
+    }
+    .curve-selector .prob-selector {
+        border: 1px solid rgb(75, 192, 192)!important;
+        background-color: rgb(75, 192, 192, 0.3);
+        color: rgb(26, 117, 116);
+    }
+    .curve-selector .btn-check:checked+.prob-selector {
+        background-color: rgb(75, 192, 192);
+        color: black;
+    }
+    .curve-selector .unrel-selector {
+        border: 1px solid rgb(252, 185, 15)!important;
+        background-color: rgb(252, 185, 15, 0.3);
+        color: rgb(212, 117, 44);
+    }
+    .curve-selector .btn-check:checked+.unrel-selector {
+        background-color: rgb(252, 185, 15);
+        color: black;
+    }
+    .curve-selector .rel-selector {
+        border: 1px solid rgb(155, 75, 192)!important;
+        background-color: rgb(155, 75, 192, 0.3);
+        color: rgb(155, 75, 192);
+    }
+    .curve-selector .btn-check:checked+.rel-selector {
+        background-color: rgb(155, 75, 192);
+        color: white;
+    }
+    .results-block {
+        background-color: #f0f0f0;
+        border-radius: 15px;
+        padding: 10px;
+        height: var(--chartHeight);
+    }
+    .hidden {
+        display: none;
+    }
+    .chart-info-block {
+        background-color: rgba(128, 128, 128, 0.1);
+        color: black;
+        border-radius: 10px;
+        font-family: "Inter", "Roboto", sans-serif;
+    }
+    .text-highlight {
+        background-color: blueviolet;
+        color: white;
+        padding: 0 5px;
+        border-radius: 5px;
+    }
+    .cta-btn:hover .shaking-rocket {
+        animation: shake 0.5s; 
+        animation-iteration-count: infinite; 
+    }
+    .shaking-rocket {
+        display: inline-block;
+    }
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    .link-violet {
+        text-decoration: none;
+        color: blueviolet;
+        cursor: pointer;
+    }
+    .link-violet:hover {
+        color: gray;
+    }
+    #graph-selector .btn.badge.rounded-pill {
+        font-size: 0.95rem;
+    }
+    .get-freebie-btn {
+        padding: 8px 16px;
+        background-color: blueviolet;
+        color: white;
+    }
+    .get-freebie-btn:hover {
+        background-color: rgba(137, 43, 226, 0.7);
+        color: black;
+    }
+    .get-freebie-btn:disabled {
+        background-color: springgreen;
+        color: black;
+        border-color: transparent;
+    }
+    .cancel-freebie-btn {
+        padding: 8px 16px;
+    }
+
+    /* Reliability brands section */
+    .slick-slide {
+        margin: 0px 20px;
+    }
+
+    .slick-slide img {
+        max-height: 120px;
+        max-width: 120px;
+    }
+
+    .slick-slider
+    {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+                user-select: none;
+        -webkit-touch-callout: none;
+        -khtml-user-select: none;
+        -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .slick-list
+    {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus
+    {
+        outline: none;
+    }
+    .slick-list.dragging
+    {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .slick-slider .slick-track,
+    .slick-slider .slick-list
+    {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+    }
+    .slick-track
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+    }
+    .slick-track div {
+        align-self: center;
+    }
+    .slick-track:before,
+    .slick-track:after
+    {
+        display: table;
+        content: '';
+    }
+    .slick-track:after
+    {
+        clear: both;
+    }
+    .slick-loading .slick-track
+    {
+        visibility: hidden;
+    }
+    .slick-slide
+    {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+    [dir='rtl'] .slick-slide
+    {
+        float: right;
+    }
+    .slick-slide img
+    {
+        display: block;
+    }
+    .slick-slide.slick-loading img
+    {
+        display: none;
+    }
+    .slick-slide.dragging img
+    {
+        pointer-events: none;
+    }
+    .slick-initialized .slick-slide
+    {
+        display: block;
+    }
+    .slick-loading .slick-slide
+    {
+        visibility: hidden;
+    }
+    .slick-arrow.slick-hidden {
+        display: none;
+    }
+    .slick-dotted.slick-slider
+    {
+        margin-bottom: 30px;
+    }
+    .slick-dots
+    {
+        position: absolute;
+        bottom: -25px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    .slick-dots li
+    {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+    .slick-dots li button
+    {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    .slick-dots li button:hover,
+    .slick-dots li button:focus
+    {
+        outline: none;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before
+    {
+        opacity: 1;
+    }
+    .slick-dots li button:before
+    {
+        /* font-family: 'slick'; */
+        font-size: 25px;
+        line-height: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: '•';
+        text-align: center;
+        opacity: .25;
+        color: black;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .slick-dots li.slick-active button:before
+    {
+        opacity: .75;
+        color: black;
+    }
+    /* ------- */
+
+    #input-data-video {
+        /* border: rgb(202, 202, 202) 2px solid; */
+        border-radius: 15px;
+    }
+    .lightblue-alert{
+        background-color: rgb(168, 214, 251);
+        color: #303030;
+        border-radius: 20px;
+        font-weight: 600;
+        height: 100%;
+        font-size: 1.3rem;
+        box-shadow: rgb(48,48,48) 15px 15px; /* rgb(0,196,255) rgb(0,116,255) */
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .cta-btn-lightblue.cta-btn {
+        background: rgb(177, 213, 247);
+        color: rgb(48,48,48);
+        box-shadow: rgb(48,48,48) 5px 5px;
+    }
+    .cta-btn-lightblue.cta-btn:hover {
+        background: rgb(201, 225, 248);
+        border-color: transparent;
+    }
+    .cta-btn-lightblue.cta-btn:hover .fa-solid {
+        transform: rotate(-180deg);
+    }
+    .cta-btn-black {
+        background-color: rgb(61,61,61);
+    }
+    .cta-btn-black:hover {
+        background-color: grey;
+        border-color: transparent;
+        color: black;
+    }
+    .cta-sec-btn-black {
+        color: rgb(61,61,61);
+        border-color: white;
+    }
+    .cta-sec-btn-black:hover {
+        background-color: grey;
+        color: white;
+        border-color: transparent!important;
+    }
+    :root {
+        --chartHeight: 400px;
+        --promoBannerHeight: 60px;
+    }
+    #benefits-of-reliability li {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    .badge.how-to {
+        background-color: rgb(252, 230, 112);
+        text-decoration: none;
+        color: rgb(70, 69, 69);
+    }
+
+    @media (max-width:768px) {
+        #landing-body {
+            padding: 10px 25px;
+        }
+        #landing-body h1 {
+            font-size: 3.3rem;
+        }
+        .section-block-title {
+            min-height: 0;
+            margin-bottom: 1rem;
+        }
+    }
+    @media (max-width:992px) {
+        .results-block {
+            height: auto;
+        }
+    }
+
+    .trial-promo-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        min-height: 60px;
+        /*line-height: 60px; 1.8rem*/
+        /* background-color: rgb(252, 230, 112); */
+        background-color: rgb(33, 37, 41);
+        color: white;
+        z-index: 9;
+    }
+    .trial-promo-footer > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .trial-promo-footer.closed {
+        transform: translateY(var(--promoBannerHeight));
+    }
+    .open-close-banner {
+        padding: 2px 10px;
+        position: absolute;
+        top: -20px;
+        /* background-color: rgb(252, 230, 112); */
+        background-color: rgb(33, 37, 41);
+        color: white;
+        border-radius: 5px;
+        right: 0;
+        cursor: pointer;
+    }
+    .trial-promo-footer.closed .open-close-banner{
+        transform: rotate(180deg);
+    }
+    #promo-banner-initial-text[aria-expanded="true"]{
+        display: none;
+    }
+    .why-pill {
+        color: white;
+        background-color: #303030;
+        font-size: 1.6rem;
+        padding: 10px 25px;
+        border-radius: 30px;
+        /* box-shadow: 5px 9px 13px -2px rgb(102, 100, 100); */
+    }
+    .why-pill:hover {
+        transform: scale(1.05);
+        transition: ease 0.3s;
+    }
+    .how-card {
+        background-color: rgb(175, 225, 255);
+        min-height: 300px;
+        border: none;
+        border-radius: 25px;
+    }
+    .options-section-wrapper {
+        background: rgb(42,231,231);
+        background: linear-gradient(180deg, rgba(175,225,255,1) 0%, rgba(122,135,255,1) 100%);
+        border-radius: 30px;
+    }
+    .expert-mode-option {
+        background-color: #f0f0f0;
+        border-radius: 25px;
+    }
+    .beginner-mode-option {
+        background-color: #303030;
+        border: 2px #303030 solid;
+        border-radius: 25px;
+        color: white;
+    }
+    #more-money-graphics {
+        position: absolute;
+        top: -90px;
+        right: 0;
+        width: 250px;
+    }
+    .adapted-subheading{
+        font-size: 2rem;
+        line-height: normal;
+    }
+    #button-group-1{
+        position: absolute;
+        bottom: 0;
+    }
+    #popular-badge{
+        position: absolute;
+        right: -10px;
+        transform: rotate(12deg);
+        background-color: gold;
+        padding: 5px 12px;
+        font-weight: 900;
+        font-size: 1.3rem;
+        border-radius: 8px;
+    }
+    @media(max-width:520px){
+        .how-card{
+            margin: 0px 2px!important;
+        }
+        .how-card h3 {
+            font-size: 1.8rem;
+        }
+        .why-pill{
+            font-size: 1.3rem;
+        }
+        #more-money-graphics {
+            width: 170px;
+        }
+        .adapted-subheading{
+            font-size: 1.8rem;
+            margin-top: 0.5rem;
+        }
+        #button-group-1{
+            position: relative;
+            bottom: auto;
+        }
+        #popular-badge{
+            transform: rotate(6deg)!important;
+            top: -16px;
+        }
+    }
+    .dev-pill{
+        color: black;
+        background-color: rgb(254, 240, 167);
+    }
+    .maint-pill{
+        color: black;
+        background-color: rgb(136, 255, 165);
+    }
+    .prod-pill{
+        color: black;
+        background-color: rgb(202, 127, 251);
+    }
+    .logis-pill{
+        color: black;
+        background-color: rgb(251 127 169);
+    }
+    .purch-pill{
+        color: black;
+        background-color: rgb(251 189 127);
+    }
+    .special-highlight {
+      position: relative;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .special-highlight::before {
+      /* Highlight color */
+      background-color: rgb(252, 230, 112);
+      content: "";
+      position: absolute;
+      width: calc(100% + 4px);
+      height: 80%;
+      left: -2px;
+      bottom: 0;
+      z-index: -1;
+      transform: rotate(-2deg);
+    }
+    #popular-badge{
+        position: absolute;
+        right: -10px;
+        transform: rotate(12deg);
+        background-color: gold;
+        padding: 5px 12px;
+        font-weight: 900;
+        font-size: 1.3rem;
+        border-radius: 8px;
+    }
+    .testimonial-card{
+        border: blueviolet 2px solid;
+        border-radius: 20px;
+    }
+    .testimonial-card .card-footer{
+        background-color: transparent;
+    }
+    .frontpage-navbar-link{
+        display: none;
+    }
+    
+</style>
+
+<div id="landing-body" class="container-fluid position-relative">
+    <div class="row col-md-11 col-12 mx-auto mb-5 pb-5" style="display: flex;">
+        <div class="col-lg-7 col-md-12 col-sm-12 mt-5">
+            <div id="headline-wrapper">
+                <h1 class="main-headline" style="font-weight: 900;">Reliability analysis made <span id="headline-wild-card"></span></h1>
+                <h2 class="sub-headline">Thousands of hardware companies are using reliability analysis to get ahead on the market
+                </h2>
+            </div>
+            <div class="mt-2" style="text-align: center;">
+                <a href="/users/register/" class="btn btn-lg cta-btn px-4" role="button">Start now! <div class="shaking-rocket">🚀</div></a>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-10 col-sm-10 mt-5 mx-auto">
+            <img src="https://reliable-files.s3.eu-central-1.amazonaws.com/static/landing-page-broadstat-light.png" style="width:100%;">
+        </div>
+    </div>
+    <div style="position: absolute; bottom: -1px; left: 0px; height: 2px; width: 100%;">
+        <svg width="100%">
+            <rect width="100%" height="2px" style="fill: rgb(255, 255, 255); stroke: none;"></rect>
+        </svg>
+    </div>
+</div>
+<!---->
+<!-- Testimonials -->
+<div id="testimonials" class="container-fluid px-0 px-md-5 pb-5">
+    <div class="testimonials-wrapper slider">
+        <div class="pt-4 slide mx-2">
+            <div class="testimonial-card card slide">
+                <div class="position-absolute" style="top: -30px;left: 25px;"><i class="fa-solid fa-quote-left" style="font-size: 3rem;background-color: white;
+                    padding: 5px;"></i></div>
+                <div class="card-body px-4 pt-5 pb-4">
+                    <div class="card-text">
+                        <p style="font-size: 1.2rem;">
+                            Every hardware company should use reliability analysis to guarantee a proper functioning of their products during
+                            their lifespan. Unfortunately, we learned this the hard way: by the time you are forced to act upon reliability 
+                            issues of your product on the field, it's already too late.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <div><i class="fa-solid fa-circle-user" style="font-size: 3rem;"></i></div>
+                    <div class="mt-2">Frank G. - Chief Product Officer</div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-4 slide mx-2">
+            <div class="testimonial-card card slide">
+                <div class="position-absolute" style="top: -30px;left: 25px;"><i class="fa-solid fa-quote-left" style="font-size: 3rem;background-color: white;
+                    padding: 5px;"></i></div>
+                <div class="card-body px-4 pt-5 pb-4">
+                    <div class="card-text">
+                        <p style="font-size: 1.2rem;">
+                            We thought reliability analysis couldn't be used for our specific use case, but a quick assessment by Broadstat 
+                            showed us several implementation opportunities in both our designs and processes. We even used it for various products 
+                            that were in different development stages.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <div><i class="fa-solid fa-circle-user" style="font-size: 3rem;"></i></div>
+                    <div class="mt-2">Alex R. - Mechanical Eng. Manager</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-block d-md-none" style="height: 3rem;"></div>
+<!-- WHY section -->
+<div class="container-fluid">
+    <div class="mt-md-5 mt-0 pt-md-5 pt-0 mx-md-5 mx-1" style="position: relative;">
+        <div class="h1 ps-4" style="font-weight: 900;">WHY</div>
+        <div class="d-flex" style="border-radius: 30px;background-color: rgb(255, 228, 162); gap:10px; padding: 25px; flex-wrap: wrap;
+        justify-content: center;max-height:500px;overflow-y:scroll;">
+            <div class="why-pill">💥 avoid product launch disasters</div>
+            <div class="why-pill">💸 optimize unit costs</div>
+            <div class="why-pill">🦺 improve user safety</div>
+            <div class="why-pill">📈 increase sales</div>
+            <div class="why-pill">🫰 negotiate better with suppliers</div>
+            <div class="why-pill">🥇 differentiate from competitors</div>
+            <div class="why-pill">⚙️ optimize maintenance</div>
+            <div class="why-pill">📦 avoid over-stocking</div>
+            <div class="why-pill">👌 guarantee life-time value</div>
+            <div class="why-pill">😎 improve brand perception</div>
+            <div class="why-pill">🤔 understand your product's behavior</div>
+            <div class="why-pill">🪂 take calculated risks</div>
+        </div>
+        <img src="static/moremoney.png" id="more-money-graphics">
+    </div>
+</div>
+<!---->
+<!-- HOW section -->
+<div class="container-fluid">
+    <div class="mt-5 pt-md-5 pt-0 mx-md-5 mx-1">
+        <div class="h1 pe-4" style="font-weight: 900; text-align: right;">HOW</div>
+        <div>
+            <div class="how-cards-wrapper slider">
+                <div class="slide how-card card d-flex">
+                    <div class="card-body" style="height: 100%;">
+                        <h5 class="card-title">
+                            <div class="dev-pill badge rounded-pill">development</div>
+                        </h5>
+                        <h3 class="card-text p-3">Characterizing and improving the reliability of your product</h3>
+                    </div>
+                    <!-- <div class="p-2 w-100">
+                        <h5 class="card-footer" style="text-align: right; background-color: transparent; border: none;">
+                            <a class="btn btn-outline-dark">See example</a>
+                        </h5>
+                    </div> -->
+                </div>
+                <div class="slide how-card card d-flex">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <div class="dev-pill badge rounded-pill">development</div>
+                            <div class="purch-pill badge rounded-pill">purchases</div>
+                        </h5>
+                        <h3 class="card-text p-3">Comparing off-the-shelf components or variations of designs in a quantitative way</h3>
+                    </div>
+                    <div class="p-2 w-100">
+                        <h5 class="card-footer" style="text-align: right; background-color: transparent; border: none;">
+                            <a href="/knowledge/how-to-compare-components/" target="_blank" class="btn btn-outline-dark">See example</a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="slide how-card card d-flex">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <div class="maint-pill badge rounded-pill">maintenance</div>
+                        </h5>
+                        <h3 class="card-text p-3">Calculating the optimal time for maintenance scheduling</h3>
+                    </div>
+                    <!-- <div class="p-2 w-100">
+                        <h5 class="card-footer" style="text-align: right; background-color: transparent; border: none;">
+                            <a class="btn btn-outline-dark">See example</a>
+                        </h5>
+                    </div> -->
+                </div>
+                <div class="slide how-card card d-flex">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <div class="dev-pill badge rounded-pill">development</div>
+                        </h5>
+                        <h3 class="card-text p-3">Reducing costs of your product without compromising its reliability requirements</h3>
+                    </div>
+                    <!-- <div class="p-2 w-100">
+                        <h5 class="card-footer" style="text-align: right; background-color: transparent; border: none;">
+                            <a class="btn btn-outline-dark">See example</a>
+                        </h5>
+                    </div> -->
+                </div>
+                <div class="slide how-card card d-flex">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <div class="maint-pill badge rounded-pill">maintenance</div>
+                            <div class="logis-pill badge rounded-pill">logistics</div>
+                        </h5>
+                        <h3 class="card-text p-3">Forecasting failure times to optimize replacements stocking</h3>
+                    </div>
+                    <!-- <div class="p-2 w-100">
+                        <h5 class="card-footer" style="text-align: right; background-color: transparent; border: none;">
+                            <a class="btn btn-outline-dark">See example</a>
+                        </h5>
+                    </div> -->
+                </div>
+                <div class="slide how-card card d-flex">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <div class="prod-pill badge rounded-pill">production</div>
+                        </h5>
+                        <h3 class="card-text p-3">Discovering quality outliers in production</h3>
+                    </div>
+                    <div class="p-2 w-100">
+                        <h5 class="card-footer" style="text-align: right; background-color: transparent; border: none;">
+                            <a href="/knowledge/how-to-detect-outliers/" target="_blank" class="btn btn-outline-dark">See example</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<!-- Options section -->
+<div class="container-fluid">
+    <div class="mt-md-5 mt-4 pt-md-5 pt-4 mx-md-5 mx-1">
+        <div class="h1 ps-4" style="font-weight: 900;">Adapted for you</div>
+        <div class="d-flex flex-wrap options-section-wrapper w-100 p-2 p-md-4">
+            <div class="col-12 col-md-6 ps-md-0">
+                <div class="expert-mode-option p-3 p-md-5 h-100 mb-3 me-0 mb-md-0 me-md-2 text-center">
+                    <div class="mb-3 adapted-subheading">Already have failure data?</div>
+                    <div class="h-100" style="position: relative;">
+                        <div>
+                            <div class="mb-3" style="font-size: 1.55rem;">Then start right away!</div>
+                                <div class="mb-3" style="font-size: 1.25rem;">Our software makes it easier than ever to get actionable 
+                                    results in a matter of minutes. ⏱️</div>
+                            <div class="mb-3" style="font-size: 1.25rem;">If you have any doubts, you can <a href="mailto:support@broadstat.com" 
+                                class="link-dark">contact us</a> anytime.</div>
+                        </div>
+                        <div class="w-100 text-center pb-md-5 pb-0" id="button-group-1">
+                            <a href="/users/register/" class="btn btn-dark m-1 px-3 rounded-pill" role="button" style="width: fit-content; 
+                            font-size: 1.25rem;">Create an account</a>
+                            <a href="#our-software" class="btn btn-outline-dark m-1 px-3 rounded-pill" role="button" style="width: fit-content; 
+                            font-size: 1.25rem;">Software specs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 pe-md-0 mt-md-0 mt-4" style="position: relative;">
+                <div id="popular-badge">Most popular</div>
+                <div class="beginner-mode-option p-3 p-md-5 h-100 ms-0 ms-md-2 text-center">
+                    <div class="mb-3 adapted-subheading">Need support on how to begin?</div>
+                    <div class="mb-3" style="font-size: 1.25rem;">We can offer you a flexible package with 
+                        different degrees of support, including:</div>
+                    <ul class="landing-section-text" style="font-size: 1.25rem;list-style-position: inside; padding-left: 0;">
+                        <li class="mb-3" style="line-height: normal;">Assessment of reliability growth opportunities specific for your organization</li>
+                        <li class="mb-3" style="line-height: normal;">Individualized implementation roadmap</li>
+                        <li class="mb-3" style="line-height: normal;">Expert support calls</li>
+                        <li class="mb-3" style="line-height: normal;">Applied learning exercises</li>
+                    </ul>
+                    <div class="w-100 text-center">
+                        <div id="program-form-block" class="w-100 text-center hidden" style="border: white 1px solid;border-radius: 20px;padding: 15px;">
+                            <p class="landing-section-text">Send us your email address and we'll get in contact with you soon.</p>
+                            <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
+                                <input type="text" class="form-control" placeholder="email@yourcompany.com" aria-label="Recipient's email" 
+                                aria-describedby="send-email-button" style="background-color: transparent;color: white;border-color: white;">
+                                <button class="btn btn-outline-light px-3" type="button" id="send-email-button">Send</button>
+                            </div>
+                        </div>
+                        <button id="interested-program-btn" class="btn btn-light m-1 px-3 rounded-pill" style="font-size: 1.25rem;">More information</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+<!-- About our software -->
+<div id="separator" style="height: 200px; position: relative;margin-top:50px;">
+    <div id="top-separator" style="height: 100%;/* filter: drop-shadow(0 -30px 15px rgba(0, 0, 0, 0.2)); */">
+        <div style="clip-path: polygon(0% 100%, 0% 50%, 100% 0%, 100% 100%); background-color: #7a87ff;
+        height: 100%;"></div>
+    </div>
+    <div id="bottom-separator" style="height: 100%;filter: drop-shadow(0 -15px 15px rgba(0, 0, 0, 0.2)); 
+        position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+        <div style="clip-path: polygon(0% 100%, 0% 80%, 100% 30%, 100% 100%); background-color: #7a87ff;
+        height: 100%;"></div>
+    </div>
+    <div style="position: absolute; bottom: -1px; left: 0px; height: 2px; width: 100%;">
+        <svg width="100%">
+            <rect width="100%" height="2px" style="fill: #7a87ff; stroke: none;"></rect>
+        </svg>
+    </div>
+</div>
+<div id="our-software" class="container-fluid mt-0 pt-md-3 pt-0 pb-3 pe-0" style="background-color: #7a87ff; 
+    color: white; position: relative;">
+    <div class="row col-lg-10 mx-auto col-12 mb-5 product-description-section">
+        <div class="h1 ps-4" style="font-weight: 900; font-size: 2.5rem">Our software</div>
+        <div id="software-what" class="pt-5 p-0 row mb-5">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-4 mb-4">
+                    <h3 class="section-block-title">What does it do?</h3>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-0 mb-4" id="what-does-it-do">
+                <div class="px-sm-0 px-3">
+                    <p class="landing-section-text">
+                        It uses failure data from field reports or lab tests, and creates a statistical representation of your system that helps you understand
+                        how it behaves. It also helps you interpret the statistical model so that you can make predictions about how your system will fail.
+                    </p>
+                </div>
+                <div class="px-sm-0 px-3">
+                    <p class="landing-section-text">
+                        These predictions let you make better decisions when it comes to things like comparing design alternatives, making maintenance schedulings,
+                        validating a system's robustness, etc.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-0 mb-4" id="example-quotes">
+                <div class="px-sm-0 px-3">
+                    <p class="landing-quote" style="font-style: italic; font-size: 1.2rem;">
+                        "The probability that this system remains functional until reaching 50,000.00 cycles of operation is 95%, with the minimum and maximum 
+                        values of this probability being 88% and 98%, respectively."
+                    </p>
+                    <p class="landing-quote" style="font-style: italic; font-size: 1.2rem;">
+                        "Of a given population, 34% of the samples are expected to at least reach 350.00 days of operation. When accounting for confidence 
+                        variability, this percentage ranges from 39% to 30%."
+                    </p>
+                </div>
+            </div>
+            <div class="mt-5 mt-lg-0 d-block">
+                <div style="text-align: center;" class="py-2">
+                    <a href="/users/register/" class="btn cta-btn cta-btn-lightblue m-1" role="button">Start now &nbsp;
+                        <i class="fa-solid fa-arrow-right-long" style="transition-duration: 0.5s;transition-property: transform;"></i>
+                    </a>
+                    <a href="/knowledge/" class="btn btn-outline-dark px-4 m-1" role="button" style="box-shadow: rgb(48,48,48) 5px 5px; 
+                    border-radius: 3rem;" target="_blank">See examples</a>
+                </div>
+            </div>
+        </div>
+        <div id="software-how" class="pt-5 p-0 row mb-5">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-4 mb-4">
+                    <h3 class="section-block-title">How does it do it?</h3>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-0 mb-4" id="how-does-it-do-it">
+                <div class="px-sm-0 px-3">
+                    <p class="landing-section-text">
+                        It combines statistical correlation formulas and optimization algorithms to obtain the most accurate results for your input data.
+                        This removes the need for you to learn the deep theory behind reliability analysis, as it does all the hard work for you.
+                    </p>
+                </div>
+                <div class="px-sm-0 px-3">
+                    <p class="landing-section-text">
+                        It is, without a doubt, <b class="text-highlight" style="background-color: rgb(61,61,61); white-space: nowrap;">the easiest tool 
+                        on the market</b> for calculating your system's reliability. The only thing you have to do is introduce your failure data and click "Calculate".
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 px-sm-5 px-3 my-lg-0 my-5">
+                <div style="padding:1.5rem;box-shadow: 11px 11px 32px rgb(65, 65, 65);border-radius: 20px;background-color: rgb(253,253,253);">
+                    <video id="input-data-video" width="100%" autoplay muted loop poster="/static/poster-landing-video.png" style="display: block;">
+                        <source src="https://reliable-files.s3.eu-central-1.amazonaws.com/static/data-input-video.mp4" type="video/mp4">
+                        <source src="https://reliable-files.s3.eu-central-1.amazonaws.com/static/data-input-video.mov" type="video/mp4">
+                        Your browser does not support video embedding.
+                    </video>
+                </div>
+            </div>
+            <div class="mt-5 mt-lg-4 d-block">
+                <div style="text-align: center;" class="py-2">
+                    <a href="/users/register/" class="btn cta-btn cta-btn-lightblue m-1" role="button">Create an account &nbsp;
+                        <i class="fa-solid fa-arrow-right-long" style="transition-duration: 0.5s;transition-property: transform;"></i>
+                    </a>
+                    <a href="/frequently-asked-questions" class="btn btn-outline-dark px-4 m-1" role="button" style="box-shadow: rgb(48,48,48) 5px 5px; 
+                    border-radius: 3rem;" target="_blank">See our FAQs</a>
+                </div>
+            </div>
+        </div>
+        <div class="row col-12 mb-5 product-description-section">
+            <div id="software-first-steps" class="mt-5 p-0">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-4 mb-4">
+                        <h3 class="section-block-title">How to begin</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-sm-5 px-3">
+                        <p class="landing-section-text">
+                            You won't have to worry about costly on-premise deployments, because our software is <b class="text-highlight" 
+                            style="background-color: rgb(61,61,61);">cloud based</b> and can be accessed from any web browser, from any device. 
+                            You won't believe how easy it is to start your first project.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-sm-5 px-3 pt-lg-0 pt-4">
+                        <p class="landing-section-text">
+                            You just have to follow our <b class="text-highlight" style="background-color: rgb(61,61,61); white-space: nowrap;">
+                                Quick setup steps</b>
+                        </p>
+                        <ol class="landing-section-text" style="padding-left: 4rem; font-family:'Inter';">
+                            <li>Sign up</li>
+                            <li>Choose a subscription plan</li>
+                            <li>Create your first project</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="mt-5 mt-lg-4 d-block">
+                    <div style="text-align: center;" class="py-2">
+                        <a href="/users/register/" class="btn cta-btn cta-btn-lightblue m-1" role="button">Sign up now &nbsp;
+                            <i class="fa-solid fa-arrow-right-long" style="transition-duration: 0.5s;transition-property: transform;"></i>
+                        </a>
+                        <a href="/pricing" class="btn btn-outline-dark px-4 m-1" role="button" style="box-shadow: rgb(48,48,48) 5px 5px; 
+                        border-radius: 3rem;" target="_blank">Check our subscription plans</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="citeway-banner">
+<div class="loading-banner banner-placeholder" style="margin: 2rem auto;"></div>
+<script async type="text/javascript" src="https://citeway.com/static/js/insert-banner.js"></script>
+</section>
+
+<div class="container-fluid my-3 pt-0 pt-md-3">
+    <div class="mx-md-3 mx-0 py-md-5 py-2 px-md-0 px-3" style="background-color: rgb(226, 241, 255); border-radius: 30px;">
+        <div class="row col-lg-10 mx-auto col-12 mb-5 my-md-0 mt-0 product-description-section">
+            <div id="section-5-quality" class="mt-5 p-0">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-8 col-md-12 px-sm-5 px-4 mb-4">
+                        <div class="h1 ps-4" style="font-weight: 900; font-size: 2.5rem;">Our support</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-sm-5 px-3">
+                        <p class="landing-section-text">
+                            We have years of experience in reliability engineering and our software has 
+                            undergone thorough testing to guarantee the accuracy of calculations. We ensure that the confidence intervals, 
+                            which are inherent in any statistical study, are clearly displayed for each project.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-sm-5 px-3">
+                        <p class="landing-section-text">
+                            Our <a class="link-violet" href="/knowledge/">knowledge page</a> offers detailed information 
+                            on technical vocabulary, guidance regarding the software itself, and applied real-life <a class="link-violet" 
+                            href="/blog/">case studies</a>. If you still need assistance, please don't hesitate to 
+                            contact us anytime at <a class="link-violet" href="mailto:support@broadstat.com">support@broadstat.com</a> and let us know 
+                            how we can help you.
+                        </p>
+                    </div>
+                </div>
+                <div style="text-align: center;" class="mt-5">
+                    <a href="/users/register/" class="btn cta-btn cta-btn-black m-1" role="button">Start now</a>
+                    <a href="mailto:support@broadstat.com" class="btn cta-sec-btn cta-sec-btn-black px-4 m-1" role="button" 
+                    style="border: 1px solid rgb(61,61,61);">
+                        Contact us</a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 px-sm-5 px-3 mt-4">
+                    <p class="landing-section-text"><small>
+                        Want some help with your test? Download for free our support sheet: <a class="link-violet" data-bs-toggle="modal" 
+                        data-bs-target="#freebie-modal">The DOs and DON'Ts of a reliability test <i class="fa-solid fa-circle-arrow-down"></i></a>
+                    </small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+
+
+
+<div id="typed-strings" style="display:none;">
+    <p>accessible^2000</p>
+    <p>simple</p>
+    <p>affordable</p>
+    <p>smooth</p>
+    <p>easy</p>
+    <p>cost-effective</p>
+    <p>intuitive</p>
+    <p>enjoyable</p>
+    <p>good-looking</p>
+    <p>for everyone</p>
+</div>
+
+
+<!-- Modal for freebie -->
+<div class="modal fade" id="freebie-modal" tabindex="-1" aria-labelledby="freebie-modal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal">
+        <div class="modal-content" style="border: none; border-radius: 1rem;">
+            <div class="modal-header" style="border: none;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" 
+                data-bs-target="#freebie-modal"></button>
+            </div>
+            <div class="modal-body items-modal px-4 pb-4 pt-0">
+              <strong class="mb-2 h3">Get your guide for free!</strong>
+              <form id="send-freebie" action="/users/register-mail" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="zA5TfYONmBeXKDEX48YcLXR10UhZZgpcQBh1abSJYF79gpavfgw8izAohpXGyIKf">
+                <div class="my-2 pt-3">
+                  <label for="email-freebie" class="form-label">Tell us where to send it</label>
+                  <input type="email" name="email-address" id="email-freebie" class="form-control" maxlength="200" required 
+                  placeholder="Email address">
+                  <input type="hidden" name="lead-id" value="1">
+                  <input type="hidden" name="welcome" value="1">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer" style="align-items: flex-start;border: 0;">
+              <div>
+                  <button type="button" class="btn btn-outline-secondary cancel-freebie-btn" data-bs-dismiss="modal"
+                  aria-label="Close" data-bs-target="#freebie-modal">Cancel</button>
+                  <button type="submit" form="send-freebie" class="btn get-freebie-btn">Send</button>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+        
+        <!-- Modal for company linking info -->
+        <div class="modal fade" id="linkCompanyModal" tabindex="-1" aria-labelledby="linkCompanyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header" style="border-bottom: 0;">
+                        <h5 class="modal-title">Link to your company's account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <p>
+                            To start new projects or participate in existing ones, your account must be associated with a paid
+                            account that is linked to your company.
+                        </p>
+                        <p class="mt-4"><b>If no one at your company has a paid account</b></p>
+                        <p>
+                            You can <a href="/pricing">select a subscription plan</a> and become the
+                            administrator of the Broadstat account associated with your organization. This will enable you to
+                            invite your colleagues to work with you, manage the subscription, and more.
+                        </p>
+                        <p class="mt-4"><b>If someone at your company already has a paid account</b></p>
+                        <p>
+                            They can invite you to join the Broadstat account associated with your organization. All they need
+                            to do is ensure that the chosen subscription plan has room for an additional user and send you an
+                            invitation from their 'My Account' section.
+                        </p>
+                    </div>
+                    <div class="modal-footer" style="border-top: 0;">
+                        <div class="d-flex">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer class="renuud-footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <p class="menu">
+                            <a href="/home/">Home</a>
+                            <a href="/terms-and-conditions">Terms and conditions</a>
+                            <a href="/privacy">Privacy</a>
+                            <a href="/cookies">Cookies</a>
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright">
+                        Copyright © 2024 | All rights reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+
+        
+        
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/is-in-viewport/3.0.4/isInViewport.min.js" 
+            integrity="sha512-eAT5Hvi9/Yx33YvSUPOpAYEA3HnUt5oKCSyPGRQwNgqD7K/90JRpFnkaL1M6ROZtLkckQKJ4WYh9cS7Urr4YjA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+        
+        
+        
+        <script crossorigin="anonymous" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        
+        
+        
+        
+        
+        <script>mixpanel.people.set({ "Registered": "No" });</script>
+        
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script id="ssjs" async src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+<script>
+    var typed = new Typed('#headline-wild-card', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 100,
+        //startDelay: 2000,
+        backSpeed: 50,
+        backDelay: 1500,
+        loop: true,
+        loopCount: Infinity,
+    });
+    
+    //Demo chart stuff
+    var bucket = '';
+    
+    function tooltipLoad() {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    }
+    function defer(method) {
+        if (window.jQuery) {
+            method();
+        } else {
+            setTimeout(function() { defer(method) }, 50);
+        }
+    }
+    defer(function () {
+        $(document).ready(function() {
+            tooltipLoad();
+        })
+        $(document).ready(function() {
+            var x = setInterval(function() {
+                try {
+                    $('.how-cards-wrapper').slick({
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        centermode: true,
+                        autoplay: false,
+                        adaptiveHeight: false,
+                        variableWidth: false,
+                        arrows: false,
+                        dots: true,
+                        pauseOnHover: false,
+                        responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                        }, {
+                        breakpoint: 520,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                        }]
+                    });
+                    $('.testimonials-wrapper').slick({
+                        slidesToShow: 2,
+                        centermode: true,
+                        autoplay: false,
+                        adaptiveHeight: false,
+                        variableWidth: false,
+                        arrows: false,
+                        dots: true,
+                        pauseOnHover: false,
+                        responsive: [{
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }]
+                    });
+                    clearInterval(x);
+                    console.log('Slick loaded correctly');
+                }
+                catch {
+                    console.log('Slick not loaded yet');
+                }
+            }, 1000);
+        });
+    });
+    function chartsAndJQuery(method) {
+        if (window.Chart && window.jQuery) {
+            method();
+        } else {
+            setTimeout(function() { chartsAndJQuery(method) }, 50);
+        }
+    }
+    chartsAndJQuery(function(){
+        $('#send-freebie').on('submit', event => {
+            event.preventDefault();
+            var sendBtn = $('.get-freebie-btn')[0];
+            sendBtn.disabled = true;
+            sendBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true">';
+            $.ajax({
+                type: "POST",
+                url: "/users/register-mail",
+                data: $('#send-freebie').serialize(),
+                success: function(response_data, status){
+                    if (status == "success"){
+                        sendBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                        setTimeout(function(){$('#freebie-modal').modal('hide')}, 1500);
+                    } else {
+                        alert('Something went wrong with your request. Please, refresh the page and try again.')
+                    }
+                }
+            })
+        });
+        $('.open-close-banner').on('click', function(){
+            var banner = $('#promo-banner')[0];
+            var r = document.querySelector(':root');
+            r.style.setProperty('--promoBannerHeight', banner.offsetHeight + 'px');
+            if ($(banner).hasClass('opened')){
+                $(banner).addClass('closed').removeClass('opened');
+            } else {
+                $(banner).addClass('opened').removeClass('closed');
+            }
+        });
+        $('#promo-banner-initial-text').on('click',() => {
+            mixpanel.track(
+                "Implementation program banner"
+            )
+        });
+        $('#interested-program-btn').on('click', (event) => {
+            mixpanel.track(
+                "Interested in program"
+            )
+            $(event.target).addClass('hidden');
+            $('#program-form-block').removeClass('hidden');
+        });
+        $('#send-email-button').on('click', (event) => {
+            var email = $('#program-form-block input')[0].value;
+            var sendBtn = event.target;
+            sendBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true">';
+            var dataString = {csrfmiddlewaretoken: 'zA5TfYONmBeXKDEX48YcLXR10UhZZgpcQBh1abSJYF79gpavfgw8izAohpXGyIKf','email-address': email, 'lead-id': 2};
+            if (email.length > 0){
+                $.ajax({
+                    type: "POST",
+                    url: "/users/register-mail",
+                    data: dataString,
+                    success: function(response_data, status){
+                        if (status == "success"){
+                            sendBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                        } else {
+                            alert('Something went wrong with your request. Please, refresh the page and try again.')
+                        }
+                        mixpanel.track(
+                            "Email for program", {'email-address': email}
+                        );
+                    }
+                })  
+            }
+        })
+
+        let headlines = $('#headline-wrapper')[0];
+        let mainHeadline = $('.main-headline')[0];
+        let subHeadline = $('.sub-headline')[0];
+        function fixHeightHeadlines(){
+            //var mainHeight = mainHeadline.offsetHeight;
+            var mainHeight = 0;
+            var subHeight = subHeadline.offsetHeight;
+            var mainLineHeight = getLineHeight(mainHeadline);
+            headlines.style.height = (mainHeight + subHeight + mainLineHeight + 15) + "px";
+        }
+        function getLineHeight(el) {
+            var temp = document.createElement(el.nodeName), ret;
+            var elWidth = el.offsetWidth;
+            if (window.innerWidth < 760){
+                var remsize = 3.3;
+            }else{
+                var remsize = 5;
+            }
+            temp.setAttribute("style", "margin:0; padding:0; "
+                + "font-family:Roboto, sans-serif;"
+                + "font-size:" + (remsize * parseFloat(getComputedStyle(document.documentElement).fontSize) + "px") + "; "
+                + "width:" + elWidth + "px");
+            // The font size is 5 rem
+            temp.innerHTML = "Reliability analysis made cost-effective__";
+            el.parentNode.appendChild(temp);
+            ret = temp.offsetHeight;
+            temp.parentNode.removeChild(temp);
+
+            return ret;
+        }
+        fixHeightHeadlines();
+        /* function showYscale(){
+            if(window.innerWidth <= 576){
+                resultschart.options.scales.y.display = false;
+            } else {
+                resultschart.options.scales.y.display = true;
+            }
+            resultschart.update();
+        } */
+        /* function adjustHeightGraph(){
+            var r = document.querySelector(':root');
+            r.style.setProperty('--chartHeight', resultschart.height + 'px');
+        } */
+        //adjustHeightGraph();
+        //showYscale();
+        $(window).on('resize', function(){
+            //showYscale();
+            //resultschart.resize();
+            fixHeightHeadlines();
+            //adjustHeightGraph();
+        });
+    });
+</script>
+
+    </body>
+</html>
